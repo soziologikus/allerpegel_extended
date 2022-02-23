@@ -29,10 +29,6 @@ def read_and_write_level():
 		csv_datei.write(zeile)
 	csv_datei.close()
 
-##def generate_and_move_plot():
-##	os.system("Rscript aller_auswertung.R")
-##	os.system("mv allerpegel_plot.jpg /var/www/html/img/")
-
 schedule.every().hour.do(read_and_write_level)
 
 ##schedule.every().day.at("07:00").do(generate_and_move_plot)
