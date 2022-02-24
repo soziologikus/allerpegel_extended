@@ -31,8 +31,6 @@ def read_and_write_level():
 
 schedule.every().hour.do(read_and_write_level)
 
-##schedule.every().day.at("07:00").do(generate_and_move_plot)
-
 while True:
 	schedule.run_pending()
 	time.sleep(1)
